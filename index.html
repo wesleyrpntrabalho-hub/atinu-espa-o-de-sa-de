@@ -5,14 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Atinu | Espaço de Saúde Integrada Sorocaba</title>
     
-    <!-- Bibliotecas Externas -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Manrope:wght@200;400;600;800&display=swap" rel="stylesheet">
 
-    <!-- Configuração de Tema -->
     <script>
         tailwind.config = {
             theme: {
@@ -36,18 +32,15 @@
     </script>
 
     <style>
-        body { background-color: #070B14; color: #F8FAFC; font-family: 'Manrope', sans-serif; overflow-x: hidden; }
+        body { background-color: #070B14; color: #F8FAFC; font-family: 'Manrope', sans-serif; }
         .serif { font-family: 'Cormorant Garamond', serif; }
         
-        /* Efeito de Vidro (Glassmorphism) */
         .glass-nav {
             background: rgba(7, 11, 20, 0.7);
             backdrop-filter: blur(15px);
-            -webkit-backdrop-filter: blur(15px);
             border-bottom: 1px solid rgba(201, 160, 80, 0.1);
         }
 
-        /* Bento Grid Cards */
         .bento-card {
             background: linear-gradient(145deg, rgba(15, 22, 36, 0.8) 0%, rgba(7, 11, 20, 0.9) 100%);
             border: 1px solid rgba(255, 255, 255, 0.05);
@@ -70,297 +63,267 @@
             background: linear-gradient(90deg, #B8860B 0%, #E5C78B 100%);
             color: #070B14;
             transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(184, 134, 11, 0.2);
         }
 
         .cta-gold:hover {
-            box-shadow: 0 0 30px rgba(201, 160, 80, 0.5);
-            transform: scale(1.03);
+            box-shadow: 0 0 25px rgba(201, 160, 80, 0.5);
+            transform: scale(1.02);
         }
 
-        /* Reveal on Scroll */
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 1s ease-out; }
+        .reveal { opacity: 0; transform: translateY(20px); transition: all 0.8s ease-out; }
         .reveal.active { opacity: 1; transform: translateY(0); }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar { width: 6px; }
-        ::-webkit-scrollbar-track { background: #070B14; }
-        ::-webkit-scrollbar-thumb { background: #C9A050; border-radius: 10px; }
     </style>
 </head>
 <body>
 
-    <!-- Navegação Superior -->
+    <!-- Header Flutuante -->
     <header class="fixed top-0 left-0 right-0 z-50 glass-nav">
-        <div class="max-w-7xl mx-auto px-6 py-5 flex justify-between items-center">
-            <a href="#" class="flex flex-col leading-none group">
-                <span class="text-2xl font-serif font-bold tracking-[0.3em] text-gold-400 group-hover:text-gold-light transition">ATINU</span>
-                <span class="text-[9px] tracking-[0.4em] uppercase text-gray-500 font-light">Saúde Integrada</span>
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="flex flex-col leading-none">
+                <span class="text-2xl font-serif font-bold tracking-[0.3em] text-gold-400">ATINU</span>
+                <span class="text-[10px] tracking-[0.4em] uppercase text-gray-500 font-light">Espaço de Saúde</span>
             </a>
             
-            <nav class="hidden md:flex space-x-12 text-[10px] uppercase tracking-[0.2em] font-semibold text-gray-400">
-                <a href="#especialidades" class="hover:text-gold-400 transition">Tratamentos</a>
-                <a href="#tecnologia" class="hover:text-gold-400 transition">Tecnologia</a>
-                <a href="#contato" class="hover:text-gold-400 transition">Unidade Sorocaba</a>
+            <nav class="hidden md:flex space-x-10 text-xs uppercase tracking-widest font-semibold text-gray-400">
+                <a href="#especialidades" class="hover:text-gold-400 transition">Especialidades</a>
+                <a href="#experiencia" class="hover:text-gold-400 transition">O Espaço</a>
+                <a href="#contato" class="hover:text-gold-400 transition">Localização</a>
             </nav>
 
-            <a href="https://wa.me/5515998714117" target="_blank" class="cta-gold px-8 py-3 rounded-full text-[10px] font-black uppercase tracking-[0.2em]">
-                Agendamento VIP
+            <a href="https://wa.me/551532338237" class="cta-gold px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest">
+                Agendar Agora
             </a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section class="relative min-h-screen flex items-center pt-24 overflow-hidden">
+    <section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
         <div class="absolute inset-0 z-0">
-            <div class="absolute top-1/4 left-1/4 w-[40rem] h-[40rem] bg-gold-400/5 rounded-full blur-[160px] animate-pulse"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-[50rem] h-[50rem] bg-blue-900/10 rounded-full blur-[200px]"></div>
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-gold-400/5 rounded-full blur-[150px]"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-blue-900/10 rounded-full blur-[180px]"></div>
         </div>
 
-        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center relative z-10">
             <div class="reveal active">
-                <span class="inline-block py-1 px-4 border border-gold-400/20 rounded-full text-gold-400 text-[10px] tracking-[0.3em] uppercase mb-8">
-                    A Excelência em Sorocaba
-                </span>
-                <h1 class="text-7xl md:text-9xl font-serif leading-[0.85] mb-10">
-                    Onde a Saúde <br> 
-                    <span class="gold-gradient-text italic font-normal">é Atitude.</span>
+                <h1 class="text-6xl md:text-8xl font-serif leading-[0.9] mb-8">
+                    A Saúde em <br> 
+                    <span class="gold-gradient-text italic font-normal">Sua Atitude.</span>
                 </h1>
                 <p class="text-gray-400 text-lg md:text-xl font-light max-w-lg mb-12 leading-relaxed">
-                    No centro histórico de Sorocaba, a Atinu combina o rigor técnico da odontologia suíça com o acolhimento de um espaço de saúde integrada.
+                    Localizada no coração de Sorocaba, a Atinu redefine o conceito de saúde integrada, unindo tecnologia digital, odontologia de precisão e bem-estar sistêmico.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-8 items-center">
-                    <a href="#especialidades" class="cta-gold px-12 py-5 rounded-2xl font-bold text-xs tracking-widest w-full sm:w-auto text-center">
-                        INICIAR TRANSFORMAÇÃO
+                <div class="flex flex-col sm:flex-row gap-6 items-center">
+                    <a href="#especialidades" class="cta-gold px-10 py-4 rounded-xl font-bold text-sm tracking-widest w-full sm:w-auto text-center">
+                        CONHECER TRATAMENTOS
                     </a>
-                    <div class="flex items-center gap-5">
-                        <div class="w-12 h-[1px] bg-gray-800"></div>
-                        <span class="text-[10px] text-gray-500 uppercase tracking-widest leading-loose">
-                            Diagnóstico <br> 100% Digital
-                        </span>
+                    <div class="flex items-center gap-4 text-xs text-gray-500 uppercase tracking-widest border-l border-gray-800 pl-6">
+                        <i data-lucide="award" class="text-gold-400 w-5 h-5"></i>
+                        Excelência em <br> Sorocaba
                     </div>
                 </div>
             </div>
 
-            <div class="relative reveal active" style="transition-delay: 300ms;">
-                <div class="rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl relative aspect-[3/4] lg:aspect-square group">
-                    <!-- Placeholder de Imagem Premium -->
-                    <img src="https://placehold.co/1000x1000/0F1624/C9A050?text=ATINU+LUXURY" alt="Clínica Atinu Sorocaba" class="object-cover w-full h-full opacity-60 group-hover:scale-105 transition duration-1000">
-                    <div class="absolute inset-0 bg-gradient-to-t from-midnight via-transparent to-transparent"></div>
-                    
-                    <!-- Floating Data Badge -->
-                    <div class="absolute bottom-10 left-10 right-10 p-8 glass-nav rounded-3xl border border-white/5 reveal active" style="transition-delay: 600ms;">
-                        <p class="text-gold-400 text-xs tracking-[0.3em] uppercase mb-2">Padrão Suíço</p>
-                        <h4 class="text-2xl font-serif italic text-white">Precisão Micrométrica em Cada Detalhe</h4>
-                    </div>
+            <div class="relative reveal active" style="transition-delay: 200ms;">
+                <div class="rounded-3xl overflow-hidden border border-white/5 shadow-2xl relative aspect-[4/5] lg:aspect-square">
+                    <img src="https://placehold.co/800x1000/0F1624/C9A050?text=ATINU+SOROCABA" alt="Espaço Atinu" class="object-cover w-full h-full opacity-80">
+                    <div class="absolute inset-0 bg-gradient-to-t from-midnight to-transparent"></div>
+                </div>
+                <!-- Badge Flutuante -->
+                <div class="absolute -bottom-6 -left-6 bg-surface/90 backdrop-blur-xl border border-gold-400/20 p-6 rounded-2xl shadow-2xl hidden md:block">
+                    <p class="text-gold-400 font-serif italic text-3xl">Precisão</p>
+                    <p class="text-[10px] text-gray-400 uppercase tracking-widest">Padrão Suíço de Odontologia</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Bento Grid: Curadoria de Tratamentos -->
-    <section id="especialidades" class="py-32 relative">
+    <!-- Bento Grid: Especialidades Integradas -->
+    <section id="especialidades" class="py-32 bg-midnight">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-end mb-24 reveal">
-                <div class="max-w-2xl">
-                    <h2 class="text-5xl md:text-7xl font-serif mb-6 italic">Curadoria de <br><span class="text-gold-400 not-italic">Serviços Elite</span></h2>
-                    <p class="text-gray-500 text-lg font-light leading-relaxed">Integramos especialidades para um resultado sistêmico. Do sorriso perfeito ao equilíbrio do sono.</p>
-                </div>
-                <div class="hidden md:block pb-4">
-                    <i data-lucide="minus" class="text-gold-400 w-20 h-20"></i>
-                </div>
+            <div class="mb-20">
+                <h2 class="text-4xl md:text-6xl font-serif mb-4">Especialidades <span class="text-gold-400 italic">Integradas</span></h2>
+                <p class="text-gray-500 max-w-xl">Na Atinu, não tratamos apenas dentes. Cuidamos do equilíbrio entre função, estética e saúde integral.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-                <!-- Card 1: Estética -->
-                <div class="bento-card md:col-span-2 p-12 rounded-[2rem] flex flex-col justify-between min-h-[400px] reveal">
-                    <div class="w-16 h-16 rounded-full bg-gold-400/10 flex items-center justify-center border border-gold-400/20">
-                        <i data-lucide="gem" class="w-6 h-6 text-gold-400"></i>
-                    </div>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <!-- Card 1: Odontologia Estética -->
+                <div class="bento-card md:col-span-2 p-10 rounded-3xl flex flex-col justify-between group reveal">
+                    <i data-lucide="gem" class="w-12 h-12 text-gold-400 mb-8"></i>
                     <div>
-                        <h3 class="text-4xl font-serif text-white mb-6">Estética de Detalhes</h3>
-                        <p class="text-gray-400 font-light leading-relaxed">Lentes de contato em porcelana e facetas ultra-finas. Textura, translucidez e naturalidade baseadas no Digital Smile Design.</p>
+                        <h3 class="text-3xl font-serif text-white mb-4">Odontologia Estética</h3>
+                        <p class="text-gray-400 text-sm font-light mb-6">Lentes de contato em porcelana, facetas ultra-finas e DSD (Digital Smile Design). O sorriso que você sempre desejou, planejado digitalmente.</p>
                     </div>
                 </div>
 
-                <!-- Card 2: Sono -->
-                <div class="bento-card p-12 rounded-[2rem] flex flex-col justify-between reveal" style="transition-delay: 150ms;">
-                    <i data-lucide="moon" class="w-10 h-10 text-gold-400/50"></i>
-                    <div>
-                        <h3 class="text-2xl font-serif text-white mb-4">Medicina do Sono</h3>
-                        <p class="text-gray-500 text-xs leading-relaxed">Soluções intraorais avançadas para Ronco e Apneia. Recupere a vitalidade através de um descanso reparador.</p>
-                    </div>
+                <!-- Card 2: Saúde do Sono -->
+                <div class="bento-card p-10 rounded-3xl reveal" style="transition-delay: 100ms;">
+                    <i data-lucide="moon" class="w-10 h-10 text-gold-400 mb-6"></i>
+                    <h3 class="text-xl font-serif text-white mb-2">Sono & ATM</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">Tratamentos para apneia, ronco e disfunções da ATM. Noites melhores para dias mais produtivos.</p>
                 </div>
 
                 <!-- Card 3: Implantes -->
-                <div class="bento-card p-12 rounded-[2rem] flex flex-col justify-between reveal" style="transition-delay: 300ms;">
-                    <i data-lucide="cpu" class="w-10 h-10 text-gold-400/50"></i>
-                    <div>
-                        <h3 class="text-2xl font-serif text-white mb-4">Implantes 3D</h3>
-                        <p class="text-gray-500 text-xs leading-relaxed">Planeamento computadorizado e cirurgia guiada. Menos tempo de cadeira, mais precisão no resultado.</p>
-                    </div>
+                <div class="bento-card p-10 rounded-3xl reveal" style="transition-delay: 200ms;">
+                    <i data-lucide="scan" class="w-10 h-10 text-gold-400 mb-6"></i>
+                    <h3 class="text-xl font-serif text-white mb-2">Implantes 3D</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">Cirurgias guiadas por computador para máxima segurança e mínima invasividade.</p>
                 </div>
 
-                <!-- Card 4: Harmonização -->
-                <div class="bento-card md:col-span-3 p-12 rounded-[2rem] flex items-center justify-between overflow-hidden relative reveal" style="transition-delay: 450ms;">
-                    <div class="max-w-lg relative z-10">
-                        <h3 class="text-4xl font-serif text-white mb-6 italic">Harmonização Full Face</h3>
-                        <p class="text-gray-400 font-light leading-relaxed">O equilíbrio estético facial que respeita a sua identidade. Procedimentos minimamente invasivos com bioestimuladores de última geração.</p>
-                    </div>
-                    <div class="absolute right-[-5%] opacity-5 group-hover:opacity-10 transition">
-                        <i data-lucide="sparkles" class="w-64 h-64 text-gold-400"></i>
-                    </div>
-                </div>
-
-                <!-- Card 5: Acupuntura -->
-                <div class="bento-card p-12 rounded-[2rem] flex flex-col justify-center items-center text-center reveal" style="transition-delay: 600ms;">
+                <!-- Card 4: Terapias Integradas -->
+                <div class="bento-card p-10 rounded-3xl reveal" style="transition-delay: 300ms;">
                     <i data-lucide="leaf" class="w-10 h-10 text-gold-400 mb-6"></i>
-                    <h3 class="text-xl font-serif text-white mb-2 italic">Acupuntura</h3>
-                    <p class="text-gray-500 text-[10px] uppercase tracking-widest">Saúde Sistêmica</p>
+                    <h3 class="text-xl font-serif text-white mb-2">Acupuntura</h3>
+                    <p class="text-gray-500 text-xs leading-relaxed">Saúde integral sistêmica auxiliando no controle de ansiedade, dor e bem-estar geral.</p>
+                </div>
+
+                <!-- Card 5: Harmonização -->
+                <div class="bento-card md:col-span-3 p-10 rounded-3xl flex flex-col md:flex-row items-center gap-10 reveal" style="transition-delay: 400ms;">
+                    <div class="flex-1">
+                        <h3 class="text-3xl font-serif text-white mb-4 italic">Harmonização Orofacial</h3>
+                        <p class="text-gray-400 text-sm font-light">Equilíbrio perfeito entre as proporções da face e o sorriso, utilizando as técnicas mais avançadas do mercado global.</p>
+                    </div>
+                    <div class="w-full md:w-1/3 text-right">
+                        <i data-lucide="sparkles" class="w-20 h-20 text-gold-400/20 inline-block"></i>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Localização Imersiva -->
-    <section id="contato" class="py-32 bg-surface relative border-y border-white/5">
-        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-24 items-center">
+    <!-- Localização & Contato -->
+    <section id="contato" class="py-32 bg-surface">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-20 items-center">
             <div class="reveal">
-                <span class="text-gold-400 text-[10px] tracking-[0.4em] uppercase mb-6 block">Onde Estamos</span>
-                <h2 class="text-6xl font-serif text-white mb-10 leading-tight">No Centro de <br> <span class="gold-gradient-text italic">Sorocaba.</span></h2>
+                <span class="text-gold-400 text-xs tracking-widest uppercase mb-4 block">No Centro de Sorocaba</span>
+                <h2 class="text-5xl font-serif text-white mb-8 leading-tight">Onde a <br> Excelência <span class="italic text-gold-400">Reside.</span></h2>
                 
-                <div class="space-y-12">
-                    <div class="flex gap-8 group">
-                        <div class="w-14 h-14 bg-midnight rounded-2xl flex items-center justify-center border border-white/10 group-hover:border-gold-400/50 transition duration-500">
-                            <i data-lucide="map-pin" class="text-gold-400 w-6 h-6"></i>
+                <div class="space-y-8">
+                    <div class="flex items-start gap-6">
+                        <div class="w-12 h-12 bg-midnight rounded-xl flex items-center justify-center border border-white/5">
+                            <i data-lucide="map-pin" class="text-gold-400 w-5 h-5"></i>
                         </div>
                         <div>
-                            <h4 class="text-white text-lg font-bold mb-2">Endereço</h4>
-                            <p class="text-gray-400 font-light leading-relaxed">Rua Professor Toledo, 530 - Centro<br>Sorocaba, SP — 18035-110</p>
+                            <h4 class="text-white font-bold mb-1">Endereço</h4>
+                            <p class="text-gray-400 text-sm">Rua Professor Toledo, 530 - Centro<br>Sorocaba, SP - 18035-110</p>
                         </div>
                     </div>
                     
-                    <div class="flex gap-8 group">
-                        <div class="w-14 h-14 bg-midnight rounded-2xl flex items-center justify-center border border-white/10 group-hover:border-gold-400/50 transition duration-500">
-                            <i data-lucide="message-square" class="text-gold-400 w-6 h-6"></i>
+                    <div class="flex items-start gap-6">
+                        <div class="w-12 h-12 bg-midnight rounded-xl flex items-center justify-center border border-white/5">
+                            <i data-lucide="phone" class="text-gold-400 w-5 h-5"></i>
                         </div>
                         <div>
-                            <h4 class="text-white text-lg font-bold mb-2">Concierge Atinu</h4>
-                            <p class="text-gray-400 font-light leading-relaxed">15 3233-8237<br>15 99871-4117 (WhatsApp)</p>
+                            <h4 class="text-white font-bold mb-1">Contato Concierge</h4>
+                            <p class="text-gray-400 text-sm">(15) 3233-8237<br>(15) 99871-4117 (WhatsApp)</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="mt-16 p-10 rounded-[2rem] border border-white/5 bg-midnight/30 flex justify-between items-center">
-                    <div>
-                        <p class="text-[10px] text-gray-500 uppercase tracking-widest mb-2">Atendimento Especializado</p>
-                        <p class="text-white font-serif italic text-lg">Segunda a Sexta, das 08h às 18h</p>
+                <div class="mt-12 p-8 rounded-3xl border border-white/5 bg-midnight/50">
+                    <h3 class="text-xl font-serif text-white mb-4">Horário de Atendimento</h3>
+                    <div class="flex justify-between text-xs text-gray-400 border-b border-white/5 pb-2 mb-2">
+                        <span>Segunda a Sexta</span>
+                        <span class="text-white">08:00 — 18:00</span>
                     </div>
-                    <div class="w-3 h-3 rounded-full bg-green-500 animate-pulse"></div>
+                    <div class="flex justify-between text-xs text-gray-400">
+                        <span>Sábado</span>
+                        <span class="text-white">Horário sob consulta</span>
+                    </div>
                 </div>
             </div>
 
-            <div class="rounded-[2.5rem] overflow-hidden border border-white/5 shadow-2xl h-[600px] grayscale brightness-75 hover:grayscale-0 hover:brightness-100 transition duration-1000 reveal" style="transition-delay: 300ms;">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.9248459423985!2d-47.46467022379373!3d-23.50098955938564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5f532f1712a3d%3A0x6a053229b3506450!2sR.%20Prof.%20Toledo%2C%20530%20-%20Centro%2C%20Sorocaba%20-%20SP%2C%2018035-110!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            <div class="rounded-3xl overflow-hidden border border-white/5 shadow-2xl h-[500px] reveal" style="transition-delay: 200ms;">
+                <!-- Iframe do Mapa (Endereço Real da Atinu) -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.9248459423985!2d-47.46467022379373!3d-23.50098955938564!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94c5f532f1712a3d%3A0x6a053229b3506450!2sR.%20Prof.%20Toledo%2C%20530%20-%20Centro%2C%20Sorocaba%20-%20SP%2C%2018035-110!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" width="100%" height="100%" style="border:0; filter: grayscale(1) invert(0.92);" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
 
-    <!-- Footer VIP -->
-    <footer class="py-20 bg-midnight relative z-10">
+    <!-- Footer Corporativo -->
+    <footer class="py-12 bg-midnight border-t border-white/5">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-3xl font-serif font-bold tracking-[0.4em] text-gold-400 mb-8">ATINU</h2>
-            <div class="w-12 h-[1px] bg-gold-400/20 mx-auto mb-8"></div>
-            <p class="text-[10px] text-gray-600 uppercase tracking-[0.3em] leading-loose max-w-lg mx-auto">
+            <p class="text-gold-400 font-serif text-2xl tracking-[0.2em] mb-4">ATINU</p>
+            <p class="text-[10px] text-gray-600 uppercase tracking-widest leading-loose">
                 Atinu Espaço de Saúde Integrada LTDA <br>
                 Rua Professor Toledo, 530 - Sorocaba/SP <br>
-                Direção Clínica: Dr. Luís Guilherme
+                Responsável Técnico: Dr. Luís Guilherme (CRO-SP)
             </p>
-            <div class="flex justify-center gap-10 mt-12 text-gray-500">
-                <a href="#" class="hover:text-gold-400 transition transform hover:scale-110"><i data-lucide="instagram"></i></a>
-                <a href="#" class="hover:text-gold-400 transition transform hover:scale-110"><i data-lucide="facebook"></i></a>
-                <a href="#" class="hover:text-gold-400 transition transform hover:scale-110"><i data-lucide="linkedin"></i></a>
+            <div class="flex justify-center gap-8 mt-8 text-gray-500">
+                <a href="#" class="hover:text-gold-400 transition"><i data-lucide="instagram"></i></a>
+                <a href="#" class="hover:text-gold-400 transition"><i data-lucide="facebook"></i></a>
             </div>
-            <p class="text-[8px] text-gray-800 mt-16 tracking-widest uppercase">© 2025 ATINU | Excellence in Health</p>
         </div>
     </footer>
 
-    <!-- Botão de Agendamento IA Flutuante -->
-    <div class="fixed bottom-8 right-8 z-50">
-        <button id="ai-btn" class="w-16 h-16 rounded-2xl cta-gold flex items-center justify-center shadow-2xl hover:rotate-6 transition duration-500">
+    <!-- Assistente de Pós-Cuidado IA (Bolsa Flutuante) -->
+    <div class="fixed bottom-6 right-6 z-40 group">
+        <button id="ai-btn" class="w-16 h-16 rounded-full cta-gold flex items-center justify-center shadow-2xl">
             <i data-lucide="sparkles" class="w-7 h-7"></i>
         </button>
+        <span class="absolute right-20 top-1/2 -translate-y-1/2 bg-surface border border-white/10 px-4 py-2 rounded-lg text-[10px] font-bold tracking-widest text-gold-400 opacity-0 group-hover:opacity-100 transition whitespace-nowrap pointer-events-none">
+            GUIA PÓS-TRATAMENTO
+        </span>
     </div>
 
-    <!-- Modal AI Assistente -->
-    <div id="ai-modal" class="fixed inset-0 bg-midnight/95 backdrop-blur-xl z-[60] hidden items-center justify-center p-6">
-        <div class="bg-surface border border-white/10 rounded-[2.5rem] w-full max-w-md p-12 relative shadow-2xl">
-            <button id="close-ai" class="absolute top-8 right-8 text-gray-500 hover:text-white transition"><i data-lucide="x"></i></button>
-            <h3 class="text-3xl font-serif text-white mb-2">Atinu <span class="text-gold-400 italic">Concierge</span></h3>
-            <p class="text-gray-500 text-xs tracking-widest uppercase mb-10">Dicas Inteligentes de Pós-Cuidado</p>
+    <!-- Modal IA -->
+    <div id="ai-modal" class="fixed inset-0 bg-black/90 backdrop-blur-md z-[60] hidden items-center justify-center p-6">
+        <div class="bg-surface border border-white/10 rounded-3xl w-full max-w-lg p-10 relative">
+            <button id="close-ai" class="absolute top-6 right-6 text-gray-500 hover:text-white"><i data-lucide="x"></i></button>
+            <h3 class="text-3xl font-serif text-white mb-2">Espace <span class="text-gold-400">AI</span></h3>
+            <p class="text-gray-500 text-sm mb-8">Dicas inteligentes para prolongar a saúde do seu sorriso ATINU.</p>
             
-            <div class="space-y-4 mb-10">
-                <button onclick="showAI('lentes')" class="w-full text-left p-5 rounded-2xl bg-midnight/50 border border-white/5 hover:border-gold-400/40 transition group flex justify-between items-center">
-                    <span class="text-sm text-gray-300">Lentes de Contato & Facetas</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-gray-700 group-hover:text-gold-400 transition"></i>
+            <div class="space-y-4" id="ai-options">
+                <button onclick="getAIData('lentes')" class="w-full text-left p-4 rounded-xl border border-white/5 hover:border-gold-400/50 transition text-sm flex justify-between group">
+                    Cuidado com Lentes de Contato <i data-lucide="chevron-right" class="w-4 h-4 text-gray-700 group-hover:text-gold-400"></i>
                 </button>
-                <button onclick="showAI('sono')" class="w-full text-left p-5 rounded-2xl bg-midnight/50 border border-white/5 hover:border-gold-400/40 transition group flex justify-between items-center">
-                    <span class="text-sm text-gray-300">Aparelhos de Ronco/Apneia</span>
-                    <i data-lucide="chevron-right" class="w-4 h-4 text-gray-700 group-hover:text-gold-400 transition"></i>
+                <button onclick="getAIData('implante')" class="w-full text-left p-4 rounded-xl border border-white/5 hover:border-gold-400/50 transition text-sm flex justify-between group">
+                    Pós-Operatório de Implantes <i data-lucide="chevron-right" class="w-4 h-4 text-gray-700 group-hover:text-gold-400"></i>
                 </button>
             </div>
 
-            <div id="ai-response" class="hidden p-6 bg-gold-400/5 rounded-2xl border border-gold-400/20 animate-in fade-in zoom-in duration-500">
-                <p id="ai-text" class="text-sm text-gold-400/80 leading-relaxed italic"></p>
+            <div id="ai-result" class="hidden mt-8 p-6 bg-midnight/50 rounded-2xl border border-gold-400/20">
+                <p id="ai-text" class="text-sm text-gray-400 leading-relaxed italic"></p>
             </div>
         </div>
     </div>
 
     <script>
-        // Inicializar ícones
         lucide.createIcons();
 
-        // Animação Reveal ao rolar
+        // Reveal Animation logic
         function reveal() {
             const reveals = document.querySelectorAll(".reveal");
             reveals.forEach(el => {
                 const windowHeight = window.innerHeight;
                 const elementTop = el.getBoundingClientRect().top;
-                if (elementTop < windowHeight - 100) {
-                    el.classList.add("active");
-                }
+                if (elementTop < windowHeight - 100) el.classList.add("active");
             });
         }
         window.addEventListener("scroll", reveal);
-        reveal(); // Trigger inicial
+        reveal();
 
-        // Lógica do Modal IA
+        // AI Modal logic
         const aiModal = document.getElementById('ai-modal');
         const aiBtn = document.getElementById('ai-btn');
         const closeAi = document.getElementById('close-ai');
 
-        aiBtn.onclick = () => {
-            aiModal.classList.remove('hidden');
-            aiModal.classList.add('flex');
-        };
-
+        aiBtn.onclick = () => aiModal.style.display = 'flex';
         closeAi.onclick = () => {
-            aiModal.classList.add('hidden');
-            aiModal.classList.remove('flex');
-            document.getElementById('ai-response').classList.add('hidden');
+            aiModal.style.display = 'none';
+            document.getElementById('ai-result').classList.add('hidden');
         };
 
-        function showAI(type) {
-            const resp = document.getElementById('ai-response');
-            const txt = document.getElementById('ai-text');
-            resp.classList.remove('hidden');
+        function getAIData(type) {
+            const result = document.getElementById('ai-result');
+            const text = document.getElementById('ai-text');
+            result.classList.remove('hidden');
             
-            const tips = {
-                lentes: "Para preservar a longevidade das suas facetas Atinu: use apenas escovas de cerdas ultra-macias, evite pastas com agentes abrasivos e realize a limpeza profissional a cada 6 meses.",
-                sono: "Mantenha o seu dispositivo de sono higienizado com pastilhas efervescentes neutras e água morna. Nunca utilize álcool ou produtos químicos fortes."
+            const database = {
+                lentes: "Para manter o brilho suíço das suas lentes: utilize escovas de cerdas curtas e macias. Evite alimentos excessivamente pigmentados nas primeiras 48h e nunca utilize pastas abrasivas de clareamento caseiro.",
+                implante: "Nas primeiras 24h: alimentação líquida/pastosa gelada. Não realize bochechos vigorosos e mantenha a cabeça elevada ao dormir para reduzir o edema. Use a medicação prescrita no horário exato."
             };
             
-            txt.innerText = tips[type];
+            text.innerText = database[type];
         }
     </script>
 </body>
